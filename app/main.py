@@ -1,31 +1,20 @@
 #!/bin/python
 
-#title:         plex-update.py
-#description:   This script installs/updates Plexmediaserver on Debian-based systems.
+#title:         main.py
+#description:   This script is a Flask-Boilerplate.
 #author:        Michael Muyakwa
-#created:       2020-12-02
-#updated:       2020-12-13
-#version:       1.5
+#created:       2021-02-07
+#updated:       2021-02-07
+#version:       1.0
 #license:       MIT
 
 from flask.globals import current_app
 from datetime import datetime
 # Regular Expression Python module
 import re
-# TextBlob - Python library for processing textual data
-from textblob import TextBlob
-# Matplotlib - plotting library to create graphs and charts
-import matplotlib.pyplot as plt
 from flask import (Flask, render_template, request)
-from replies import *
 from calcdates import *
-from markupsafe import escape
 from decouple import config
-# WordCloud - Python linrary for creating image wordclouds
-from wordcloud import (WordCloud, STOPWORDS)
-import pybase64
-from io import BytesIO
-from concurrent import futures
 
 # configuration
 DEBUG = config('DEBUG')
